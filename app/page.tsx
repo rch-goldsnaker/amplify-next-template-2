@@ -13,6 +13,11 @@ Amplify.configure(outputs);
 
 const client = generateClient<Schema>();
 
+
+client.queries.sayHello({
+  name: "Amplify",
+})
+
 export default function App() {
   const [todos, setTodos] = useState<Array<Schema["Todo"]["type"]>>([]);
 
